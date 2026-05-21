@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LEOHUB</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="image/LogoLeoHub.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- MODAL CARRINHO -->
+  <div class="cart-modal" id="cartModal">
+
+    <div class="cart-content">
+
+      <div class="cart-header">
+        <h2>Meu Carrinho</h2>
+
+        <button id="closeCart">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div id="cartItems"></div>
+
+      <div class="cart-footer">
+
+        <h3>
+          Total:
+          <span id="cartTotal">R$ 0,00</span>
+        </h3>
+
+        <button id="finishOrder">
+          <i class="fa-brands fa-whatsapp"></i>
+          Finalizar Compra
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <!-- LOGO -->
+      <div class="logo-container">
+
+        <div class="logo-image">
+          <img src="image/LogoLeoHub.png" alt="Logo LeoHub">
+        </div>
+
+        <h2>LEOHUB</h2>
+
+      </div>
+
+      <!-- MENU -->
+      <nav class="menu">
+
+        <a href="#" class="active" id="homeBtn">
+          <i class="fa-solid fa-house"></i>
+          <span>Página Inicial</span>
+        </a>
+
+        <a href="#" id="installBtn">
+          <i class="fa-solid fa-download"></i>
+          <span>Como Instalar</span>
+        </a>
+
+        <a href="#" id="supportBtn">
+          <i class="fa-solid fa-headset"></i>
+          <span>Suporte</span>
+        </a>
+
+        <a href="https://wa.me/5571981820438" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>WhatsApp</span>
+        </a>
+
+      </nav>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="content">
+
+      <!-- HOME -->
+      <section id="homeSection">
+
+        <header class="top-header">
+
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text" id="searchInput" placeholder="Pesquisar streaming...">
+          </div>
+
+          <div class="cart-area">
+            <button id="cartBtn">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="cartCount">0</span>
+            </button>
+          </div>
+
+        </header>
+
+        <div class="title-section">
+          <h1>Escolha seu Streaming</h1>
+          <p>Assine sua plataforma favorita</p>
+        </div>
+
+        <!-- SEUS CARDS FICAM AQUI -->
+        <section class="cards-container" id="cardsContainer">
+
+          <div class="card" data-name="netflix">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix">
+
+            <h3>Netflix</h3>
+            <span>R$ 19,90/mês</span>
+
+            <button class="subscribe-btn">
+              Adicionar
+            </button>
+          </div>
+
+          <div class="card" data-name="disney">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Disney">
+
+            <h3>Disney+</h3>
+            <span>R$ 21,90/mês</span>
+
+            <button class="subscribe-btn">
+              Adicionar
+            </button>
+          </div>
+
+          <div class="card" data-name="max">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" alt="HBO">
+
+            <h3>HBO Max</h3>
+            <span>R$ 24,90/mês</span>
+
+            <button class="subscribe-btn">
+              Adicionar
+            </button>
+          </div>
+
+          <div class="card" data-name="prime video">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png" alt="Prime Video">
+
+            <h3>Prime Video</h3>
+            <span>R$ 14,90/mês</span>
+
+            <button class="subscribe-btn">
+              Adicionar
+            </button>
+          </div>
+
+          <!-- PREMIERE -->
+          <div class="card" data-name="premiere">
+            <img src="https://logodownload.org/wp-content/uploads/2018/04/premiere-fc-logo.png" alt="Premiere">
+
+            <h3>Premiere</h3>
+
+            <span>R$ 29,90/mês</span>
+
+            <button class="subscribe-btn">
+              Adicionar
+            </button>
+          </div>
+
+          <!-- GLOBOPLAY PREMIUM -->
+          <div class="card" data-name="globoplay premium">
+            <img src="https://logodownload.org/wp-content/uploads/2019/12/globoplay-logo-5.png" alt="Globoplay Premium">
+
+            <h3>Globoplay Premium</h3>
+
+            <span>R$ 39,90/mês</span>
+
+            <button class="subscribe-btn">
+              Adicionar
+            </button>
+          </div>
+
+          <!-- GLOBOPLAY + TELECINE -->
+          <div class="card" data-name="globoplay premium telecine">
+            <img src="https://www.exibidor.com.br/fotos/noticias/notundefined_1654798540.jpg"
+              alt="Globoplay + Telecine">
+
+            <h3>Globoplay + Telecine</h3>
+
+            <span>R$ 49,90/mês</span>
+
+            <button class="subscribe-btn">
+              Adicionar
+            </button>
+          </div>
+
+          <!-- GLOBOPLAY + TELECINE + PREMIERE -->
+          <div class="card" data-name="globoplay premium telecine premiere">
+            <img src="https://www.tvpop.com.br/wp-content/uploads/2021/02/Globoplay-e-Premiere-768x432.jpg"
+              alt="Globoplay Completo">
+
+            <h3>Globoplay + Telecine + Premiere</h3>
+
+            <span>R$ 59,90/mês</span>
+
+            <button class="subscribe-btn">
+              Adicionar
+            </button>
+          </div>
+
+          <!-- CRUNCHYROLL -->
+          <div class="card" data-name="crunchyroll">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Crunchyroll_Logo.png" alt="Crunchyroll">
+
+            <h3>Crunchyroll</h3>
+
+            <span>R$ 14,90/mês</span>
+
+            <button class="subscribe-btn">
+              Adicionar
+            </button>
+          </div>
+
+          <!-- YOUTUBE PREMIUM -->
+          <div class="card esgotado" data-name="youtube premium">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Youtube Premium">
+
+            <h3>Youtube Premium</h3>
+
+            <span>R$ 15,90/mês</span>
+
+            <button class="subscribe-btn">
+              Adicionar
+            </button>
+          </div>
+
+          <div class="card esgotado" data-name="paramount">
+
+            <img src="https://logodownload.org/wp-content/uploads/2014/07/paramount-logo-1.png" alt="Paramount+">
+
+            <h3>Paramount+</h3>
+
+            <span>R$ 19,90/mês</span>
+
+            <button class="subscribe-btn">
+              Adicionar
+            </button>
+
+          </div>
+
+          <div class="card esgotado" data-name="discovery">
+
+            <img src="https://logodownload.org/wp-content/uploads/2021/11/discovery-plus-logo.png" alt="Discovery+">
+
+            <h3>Discovery+</h3>
+
+            <span>R$ 18,90/mês</span>
+
+            <button class="subscribe-btn">
+              Adicionar
+            </button>
+
+          </div>
+
+        </section>
+
+      </section>
+
+      <!-- COMO INSTALAR -->
+      <section id="installSection" style="display: none;">
+
+        <div class="title-section">
+          <h1>Como Instalar</h1>
+          <p>Aprenda a acessar sua conta</p>
+        </div>
+
+        <div class="card support-card">
+          <h3>1. Receba seus dados</h3>
+          <p>
+            Após a compra você receberá login e senha no WhatsApp.
+          </p>
+        </div>
+
+        <br>
+
+        <div class="card support-card">
+          <h3>2. Baixe o aplicativo</h3>
+          <p>
+            Instale Netflix, Disney+, Prime Video ou outro streaming.
+          </p>
+        </div>
+
+        <br>
+
+        <div class="card support-card">
+          <h3>3. Faça login</h3>
+          <p>
+            Entre com os dados enviados e aproveite.
+          </p>
+        </div>
+
+      </section>
+
+      <!-- SUPORTE -->
+      <section id="supportSection" style="display: none;">
+
+        <div class="title-section">
+          <h1>Suporte</h1>
+          <p>Estamos prontos para ajudar</p>
+        </div>
+
+        <div class="card support-card">
+          <h3>Horário de Atendimento</h3>
+
+          <p>
+            🛠️ Precisa de Suporte com seu Acesso? <br> <br>
+            Para que nossa equipe resolva o seu problema com o máximo de agilidade, evite mensagens genéricas como "não
+            está funcionando". Precisamos identificar o erro exato para corrigi-lo. <br> <br>
+
+            Antes de abrir o seu chamado, certifique-se de enviar: <br> <br>
+
+            📸 Foto ou Vídeo: Um print nítido ou um vídeo curto da tela mostrando o erro. <br> <br>
+
+            📝 O Erro Exato: Especifique o que aparece na tela (ex: Senha incorreta, Código de residência, Tela travada
+            ou Limite de telas). <br> <br>
+
+            💡 Por que isso é importante? <br> Com a foto e a descrição exata, nosso suporte consegue liberar o seu
+            acesso na
+            hora, sem precisar fazer várias perguntas antes.
+          </p>
+
+          <br>
+
+          <button class="subscribe-btn" onclick="window.open('https://wa.me/5571981820438')">
+            Abrir WhatsApp
+          </button>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
